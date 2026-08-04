@@ -17,8 +17,8 @@ onMounted(() => {
     scale: 1,
     scaleMobile: 1,
     backgroundColor: 0xf5f7fa,
-    color1: 0x4aa3ff,
-    color2: 0x8f4aff,
+    color1: 0x7ad3ff,
+    color2: 0xaf5aff,
   })
 })
 
