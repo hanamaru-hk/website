@@ -8,14 +8,27 @@ This document describes the preliminary requirements and technical plan for the 
 
 ### Hosting
 
-- Host the website on a VPS (Virtual Private Server).
+- Host the website on a VPS running Ubuntu.
+- Serve via Nginx as the reverse proxy / web server.
+- Deploy automatically via GitHub Actions.
 
 ### Frontend
 
-- Built with Vue.js.
+- Built with Vue.js and Naive UI.
+
+### UI
+
+- Upper menu with Home, Services, and Contact links.
+- Menu collapses into a hamburger menu on mobile.
+- Shared background across all pages using Vanta.js, rendered as a non-scrolling underlay.
+
+### Pages
+
+- **Home**: Displays the site slogan.
+- **Services**: Lists software vendor services.
+- **Contact**: Same as the Hanamaru contact page.
 
 ## Open Questions
 
-- Deployment strategy (Docker, reverse proxy, systemd, etc.) — TBD.
 - Hosting provider and server setup — TBD.
 - Project scaffolding and package manager — TBD.
