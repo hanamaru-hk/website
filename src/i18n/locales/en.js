@@ -15,26 +15,62 @@ export default {
       {
         name: 'Custom Software Development',
         description:
-          'Tailored web and mobile applications built around your business needs.',
-        tags: ['Web', 'Mobile'],
+          'Tailored web, mobile, desktop and cloud applications built around your business needs.',
+        tags: ['Web', 'Mobile', 'Desktop'],
       },
       {
-        name: 'System Integration',
+        name: 'Web Application Development',
         description:
-          'Connect and unify your existing tools, APIs, and data pipelines.',
-        tags: ['API', 'Automation'],
+          'Dashboards, client portals, booking systems and SaaS platforms for your team and customers.',
+        tags: ['Dashboard', 'Portal', 'SaaS'],
+      },
+      {
+        name: 'Mobile App Development',
+        description:
+          'Native iOS and Android apps, plus cross-platform builds that share a single codebase.',
+        tags: ['iOS', 'Android'],
+      },
+      {
+        name: 'AI Integration & Automation',
+        description:
+          'AI features, chatbots and workflow automation that remove repetitive manual work.',
+        tags: ['AI', 'Automation'],
+      },
+      {
+        name: 'API & Third-Party Integrations',
+        description:
+          'Connect your tools with accounting, CRM, ERP and payment gateways.',
+        tags: ['API', 'CRM', 'ERP'],
+      },
+      {
+        name: 'UI/UX Design',
+        description:
+          'App and web design, from discovery and wireframes to polished interfaces.',
+        tags: ['UI', 'UX'],
+      },
+      {
+        name: 'Legacy Modernisation',
+        description:
+          'Migrate, replatform and refactor outdated systems onto maintainable modern stacks.',
+        tags: ['Migration', 'Refactoring'],
+      },
+      {
+        name: 'Maintenance & Support',
+        description:
+          'SLA-backed packages covering security patches, upgrades and ongoing feature work.',
+        tags: ['Support', 'SLA'],
+      },
+      {
+        name: 'Consultancy / Fractional CTO',
+        description:
+          'Senior technical strategy, architecture reviews and due diligence.',
+        tags: ['Strategy', 'Consulting'],
       },
       {
         name: 'Cloud & DevOps',
         description:
           'Reliable hosting, CI/CD pipelines, and infrastructure as code.',
         tags: ['AWS', 'CI/CD'],
-      },
-      {
-        name: 'Maintenance & Support',
-        description:
-          'Ongoing monitoring, updates, and support for running systems.',
-        tags: ['Support', 'Monitoring'],
       },
     ],
   },
