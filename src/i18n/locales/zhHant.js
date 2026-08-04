@@ -14,23 +14,53 @@ export default {
     items: [
       {
         name: '定制軟件開發',
-        description: '按照你的業務需求，量身打造網頁及流動應用程式。',
-        tags: ['網頁', '流動'],
+        description: '按照你的業務需求，量身打造網頁、流動、桌面及雲端應用程式。',
+        tags: ['網頁', '流動', '桌面'],
       },
       {
-        name: '系統整合',
-        description: '連接及整合你現有的工具、API 與數據管道。',
-        tags: ['API', '自動化'],
+        name: '網頁應用程式開發',
+        description: '為你的團隊及客戶打造儀表板、客戶入口網站、預約系統及 SaaS 平台。',
+        tags: ['儀表板', '入口網站', 'SaaS'],
+      },
+      {
+        name: '流動應用程式開發',
+        description: 'iOS 及 Android 原生應用程式，以及共享單一代碼庫的跨平台方案。',
+        tags: ['iOS', 'Android'],
+      },
+      {
+        name: 'AI 整合及自動化',
+        description: '利用 AI 功能、聊天機器人及工作流程自動化，消除重複的繁瑣工序。',
+        tags: ['AI', '自動化'],
+      },
+      {
+        name: 'API 及第三方整合',
+        description: '將你的工具連接至會計、CRM、ERP 及付款系統。',
+        tags: ['API', 'CRM', 'ERP'],
+      },
+      {
+        name: 'UI/UX 設計',
+        description: '應用程式及網頁設計，涵蓋需求分析、線框圖至精美介面。',
+        tags: ['UI', 'UX'],
+      },
+      {
+        name: '舊系統現代化',
+        description: '將過時的系統遷移、重組及現代化至易於維護的技術棧。',
+        tags: ['遷移', '重組'],
+      },
+      {
+        name: '維護及支援',
+        description: '涵蓋安全更新、升級及持續功能開發的 SLA 支援計劃。',
+        tags: ['支援', 'SLA'],
+      },
+      {
+        name: '技術諮詢 / 兼任技術總監',
+        description: '高級技術策略、架構審查及盡職審查。',
+        tags: ['策略', '諮詢'],
       },
       {
         name: '雲端及 DevOps',
         description: '可靠的託管、CI/CD 流程及「基礎設施即程式碼」。',
         tags: ['AWS', 'CI/CD'],
-      },
-      {
-        name: '維護及支援',
-        description: '為運行中的系統提供持續監察、更新及支援。',
-        tags: ['支援', '監察'],
       },
     ],
   },
