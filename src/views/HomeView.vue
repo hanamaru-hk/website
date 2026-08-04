@@ -1,11 +1,11 @@
 <script setup>
-const slogan = 'Your trusted software partner.'
+const slogan = 'Build it. Own it.'
 </script>
 
 <template>
   <section class="hero">
     <h1 class="slogan">{{ slogan }}</h1>
-    <p class="subtitle">Hanamaru Company Limited 花丸有限公司</p>
+    <p class="subtitle">Hanamaru Software</p>
   </section>
 </template>
 

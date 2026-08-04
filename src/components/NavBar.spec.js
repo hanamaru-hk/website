@@ -10,11 +10,6 @@ vi.mock('vue-router', () => ({
 }))
 
 describe('NavBar', () => {
-  it('renders the brand name', () => {
-    const wrapper = mount(NavBar)
-    expect(wrapper.find('.brand').text()).toBe('Hanamaru')
-  })
-
   it('renders a desktop menu with all links', () => {
     const wrapper = mount(NavBar)
     const menu = wrapper.find('.desktop-menu')

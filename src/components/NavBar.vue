@@ -40,8 +40,6 @@ onBeforeUnmount(() => {
 <template>
   <header class="navbar">
     <div class="navbar-inner">
-      <span class="brand">Hanamaru</span>
-
       <n-menu
         v-if="!isMobile"
         class="desktop-menu"
@@ -96,12 +94,6 @@ onBeforeUnmount(() => {
   margin: 0 auto;
   padding: 0 1.5rem;
   height: 64px;
-}
-
-.brand {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
 }
 
 .hamburger {

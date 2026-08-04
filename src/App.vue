@@ -14,7 +14,7 @@ import NavBar from './components/NavBar.vue'
           <router-view />
         </main>
         <footer class="footer">
-          © 2026 Hanamaru Company Limited 花丸有限公司
+          © 2026 Hanamaru Company Limited
         </footer>
       </div>
     </n-message-provider>
