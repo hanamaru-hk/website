@@ -1,19 +1,34 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { NButton, NMenu, NDropdown } from 'naive-ui'
+import { useLocale } from '../composables/useLocale'
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
+const { currentLocale, setLocale, locales } = useLocale()
 
 const links = [
-  { label: 'Home', key: 'home', to: '/' },
-  { label: 'Services', key: 'services', to: '/services' },
-  { label: 'Contact', key: 'contact', to: '/contact' },
+  { label: computed(() => t('nav.home')), key: 'home', to: '/' },
+  { label: computed(() => t('nav.services')), key: 'services', to: '/services' },
+  { label: computed(() => t('nav.contact')), key: 'contact', to: '/contact' },
 ]
 
-const menuOptions = links.map(({ label, key }) => ({ label, key }))
+const menuOptions = computed(() =>
+  links.map(({ label, key }) => ({ label: label.value, key })),
+)
+
+const languageOptions = computed(() =>
+  Object.entries(locales).map(([value, { label }]) => ({
+    label,
+    key: value,
+  })),
+)
+
 const activeKey = computed(() => route.name)
+const currentShortLabel = computed(() => locales[currentLocale.value].shortLabel)
 
 const isMobile = ref(false)
 function syncIsMobile() {
@@ -25,6 +40,10 @@ function handleSelect(key) {
   if (link && link.to !== route.path) {
     router.push(link.to)
   }
+}
+
+function handleLanguageSelect(key) {
+  setLocale(key)
 }
 
 onMounted(() => {
@@ -72,6 +91,17 @@ onBeforeUnmount(() => {
           </svg>
         </n-button>
       </n-dropdown>
+
+      <n-dropdown
+        trigger="click"
+        placement="bottom-end"
+        :options="languageOptions"
+        @select="handleLanguageSelect"
+      >
+        <n-button quaternary class="language-switcher" aria-label="Language">
+          {{ currentShortLabel }}
+        </n-button>
+      </n-dropdown>
     </div>
   </header>
 </template>
@@ -97,6 +127,10 @@ onBeforeUnmount(() => {
 }
 
 .hamburger {
+  color: #1f2329;
+}
+
+.language-switcher {
   color: #1f2329;
 }
 </style>

@@ -1,11 +1,13 @@
 <script setup>
-const slogan = 'Build it. Own it.'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section class="hero">
-    <h1 class="slogan">{{ slogan }}</h1>
-    <p class="subtitle">Hanamaru Software</p>
+    <h1 class="slogan">{{ t('home.slogan') }}</h1>
+    <p class="subtitle">{{ t('home.subtitle') }}</p>
   </section>
 </template>
 

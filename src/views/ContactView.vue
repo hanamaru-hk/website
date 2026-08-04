@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import {
   NButton,
   NCard,
@@ -9,6 +10,7 @@ import {
   useMessage,
 } from 'naive-ui'
 
+const { t } = useI18n()
 const message = useMessage()
 
 const formRef = ref(null)
@@ -19,15 +21,15 @@ const form = ref({
   message: '',
 })
 
-const rules = {
-  name: { required: true, message: 'Please enter your name', trigger: ['blur'] },
-  email: { required: true, message: 'Please enter your email', trigger: ['blur'] },
-}
+const rules = computed(() => ({
+  name: { required: true, message: t('contact.rules.nameRequired'), trigger: ['blur'] },
+  email: { required: true, message: t('contact.rules.emailRequired'), trigger: ['blur'] },
+}))
 
 function handleSubmit() {
   formRef.value?.validate((errors) => {
     if (errors) return
-    message.success('Thank you for your enquiry, we will reply shortly.')
+    message.success(t('contact.success'))
     form.value = { name: '', phone: '', email: '', message: '' }
   })
 }
@@ -35,11 +37,11 @@ function handleSubmit() {
 
 <template>
   <section>
-    <h2 class="title">Contact</h2>
-    <p class="intro">Same as the Hanamaru contact page.</p>
+    <h2 class="title">{{ t('contact.title') }}</h2>
+    <p class="intro">{{ t('contact.intro') }}</p>
 
     <div class="contact-links">
-      <n-card class="link-card" title="Email">
+      <n-card class="link-card" :title="t('contact.email')">
         <p>info@hanamaru.hk</p>
         <n-button
           tag="a"
@@ -48,11 +50,11 @@ function handleSubmit() {
           type="primary"
           size="small"
         >
-          Send email
+          {{ t('contact.sendEmail') }}
         </n-button>
       </n-card>
 
-      <n-card class="link-card" title="WhatsApp">
+      <n-card class="link-card" :title="t('contact.whatsapp')">
         <p>5980 6801</p>
         <n-button
           tag="a"
@@ -62,31 +64,31 @@ function handleSubmit() {
           type="primary"
           size="small"
         >
-          Chat on WhatsApp
+          {{ t('contact.chatOnWhatsApp') }}
         </n-button>
       </n-card>
     </div>
 
-    <n-card title="Send us a message" class="form-card">
+    <n-card :title="t('contact.formTitle')" class="form-card">
       <n-form ref="formRef" :model="form" :rules="rules" label-placement="top">
-        <n-form-item label="Name" path="name">
-          <n-input v-model:value="form.name" placeholder="Your name" />
+        <n-form-item :label="t('contact.name')" path="name">
+          <n-input v-model:value="form.name" :placeholder="t('contact.placeholders.name')" />
         </n-form-item>
-        <n-form-item label="Phone" path="phone">
-          <n-input v-model:value="form.phone" placeholder="Your phone number" />
+        <n-form-item :label="t('contact.phone')" path="phone">
+          <n-input v-model:value="form.phone" :placeholder="t('contact.placeholders.phone')" />
         </n-form-item>
-        <n-form-item label="Email" path="email">
-          <n-input v-model:value="form.email" placeholder="Your email" />
+        <n-form-item :label="t('contact.emailField')" path="email">
+          <n-input v-model:value="form.email" :placeholder="t('contact.placeholders.email')" />
         </n-form-item>
-        <n-form-item label="Message" path="message">
+        <n-form-item :label="t('contact.message')" path="message">
           <n-input
             v-model:value="form.message"
             type="textarea"
-            placeholder="Any enquiries"
+            :placeholder="t('contact.placeholders.message')"
             :rows="4"
           />
         </n-form-item>
-        <n-button type="primary" block @click="handleSubmit">Submit</n-button>
+        <n-button type="primary" block @click="handleSubmit">{{ t('contact.submit') }}</n-button>
       </n-form>
     </n-card>
   </section>
