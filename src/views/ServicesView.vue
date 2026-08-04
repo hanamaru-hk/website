@@ -1,37 +1,20 @@
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { NGrid, NGi, NCard, NTag } from 'naive-ui'
 
-const services = [
-  {
-    name: 'Custom Software Development',
-    description: 'Tailored web and mobile applications built around your business needs.',
-    tags: ['Web', 'Mobile'],
-  },
-  {
-    name: 'System Integration',
-    description: 'Connect and unify your existing tools, APIs, and data pipelines.',
-    tags: ['API', 'Automation'],
-  },
-  {
-    name: 'Cloud & DevOps',
-    description: 'Reliable hosting, CI/CD pipelines, and infrastructure as code.',
-    tags: ['AWS', 'CI/CD'],
-  },
-  {
-    name: 'Maintenance & Support',
-    description: 'Ongoing monitoring, updates, and support for running systems.',
-    tags: ['Support', 'Monitoring'],
-  },
-]
+const { t } = useI18n()
+
+const services = computed(() => t('services.items'))
 </script>
 
 <template>
   <section>
-    <h2 class="title">Services</h2>
-    <p class="intro">Software vendor services we offer.</p>
+    <h2 class="title">{{ t('services.title') }}</h2>
+    <p class="intro">{{ t('services.intro') }}</p>
 
     <n-grid :x-gap="16" :y-gap="16" responsive="screen" cols="1 s:2">
-      <n-gi v-for="service in services" :key="service.name">
+      <n-gi v-for="(service, index) in services" :key="index">
         <n-card :title="service.name" class="service-card">
           <p class="description">{{ service.description }}</p>
           <div class="tags">

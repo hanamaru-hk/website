@@ -1,11 +1,31 @@
 <script setup>
-import { NConfigProvider, NMessageProvider } from 'naive-ui'
+import { computed } from 'vue'
+import {
+  NConfigProvider,
+  NMessageProvider,
+  enUS,
+  dateEnUS,
+  zhTW,
+  dateZhTW,
+} from 'naive-ui'
+import { useI18n } from 'vue-i18n'
 import VantaBackground from './components/VantaBackground.vue'
 import NavBar from './components/NavBar.vue'
+
+const { t, locale } = useI18n()
+
+const naiveLocales = {
+  en: { locale: enUS, dateLocale: dateEnUS },
+  'zh-Hant': { locale: zhTW, dateLocale: dateZhTW },
+}
+
+const naiveLocale = computed(
+  () => naiveLocales[locale.value] ?? naiveLocales.en,
+)
 </script>
 
 <template>
-  <n-config-provider>
+  <n-config-provider :locale="naiveLocale.locale" :date-locale="naiveLocale.dateLocale">
     <n-message-provider>
       <div class="app">
         <VantaBackground />
@@ -14,7 +34,7 @@ import NavBar from './components/NavBar.vue'
           <router-view />
         </main>
         <footer class="footer">
-          © 2026 Hanamaru Company Limited
+          {{ t('footer.rights') }}
         </footer>
       </div>
     </n-message-provider>
