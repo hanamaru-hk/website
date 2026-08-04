@@ -3,9 +3,9 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NGrid, NGi, NCard, NTag } from 'naive-ui'
 
-const { t } = useI18n()
+const { t, tm } = useI18n()
 
-const services = computed(() => t('services.items'))
+const services = computed(() => tm('services.items'))
 </script>
 
 <template>
@@ -17,11 +17,7 @@ const services = computed(() => t('services.items'))
       <n-gi v-for="(service, index) in services" :key="index">
         <n-card :title="service.name" class="service-card">
           <p class="description">{{ service.description }}</p>
-          <div class="tags">
-            <n-tag v-for="tag in service.tags" :key="tag" size="small" :bordered="false">
-              {{ tag }}
-            </n-tag>
-          </div>
+
         </n-card>
       </n-gi>
     </n-grid>
