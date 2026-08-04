@@ -32,6 +32,6 @@ const slogan = 'Your trusted software partner.'
 .subtitle {
   margin-top: 1rem;
   font-size: 1.1rem;
-  color: rgba(245, 247, 250, 0.7);
+  color: rgba(31, 35, 41, 0.7);
 }
 </style>

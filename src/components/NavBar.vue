@@ -84,8 +84,8 @@ onBeforeUnmount(() => {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(8px);
-  background: rgba(10, 10, 20, 0.55);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(31, 35, 41, 0.08);
 }
 
 .navbar-inner {
@@ -105,6 +105,6 @@ onBeforeUnmount(() => {
 }
 
 .hamburger {
-  color: #f5f7fa;
+  color: #1f2329;
 }
 </style>
