@@ -101,7 +101,7 @@ function handleSubmit() {
 
 .intro {
   margin-bottom: 1.5rem;
-  color: rgba(245, 247, 250, 0.7);
+  color: rgba(31, 35, 41, 0.7);
 }
 
 .contact-links {
@@ -113,7 +113,7 @@ function handleSubmit() {
 
 .link-card p {
   margin-bottom: 0.75rem;
-  color: rgba(245, 247, 250, 0.8);
+  color: rgba(31, 35, 41, 0.8);
 }
 
 .form-card {

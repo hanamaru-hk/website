@@ -16,7 +16,7 @@ onMounted(() => {
     minWidth: 200,
     scale: 1,
     scaleMobile: 1,
-    backgroundColor: 0x0a0a14,
+    backgroundColor: 0xf5f7fa,
     color1: 0x4aa3ff,
     color2: 0x8f4aff,
   })

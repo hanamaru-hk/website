@@ -1,12 +1,11 @@
 <script setup>
-import { darkTheme } from 'naive-ui'
 import { NConfigProvider, NMessageProvider } from 'naive-ui'
 import VantaBackground from './components/VantaBackground.vue'
 import NavBar from './components/NavBar.vue'
 </script>
 
 <template>
-  <n-config-provider :theme="darkTheme">
+  <n-config-provider>
     <n-message-provider>
       <div class="app">
         <VantaBackground />
@@ -15,7 +14,7 @@ import NavBar from './components/NavBar.vue'
           <router-view />
         </main>
         <footer class="footer">
-          © 2026 Hanamaru Company Limited 花丸有限公司
+          © 2026 Hanamaru Company Limited
         </footer>
       </div>
     </n-message-provider>
@@ -37,8 +36,8 @@ body {
 body {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
     'Microsoft YaHei', Arial, sans-serif;
-  color: #f5f7fa;
-  background-color: #0a0a14;
+  color: #1f2329;
+  background-color: #f5f7fa;
 }
 
 #app {
@@ -68,6 +67,6 @@ body {
   padding: 1.25rem 1.5rem;
   text-align: center;
   font-size: 0.85rem;
-  color: rgba(245, 247, 250, 0.6);
+  color: rgba(31, 35, 41, 0.6);
 }
 </style>
