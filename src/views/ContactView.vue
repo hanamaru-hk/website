@@ -119,6 +119,6 @@ function handleSubmit() {
 }
 
 .form-card {
-  max-width: 560px;
+  width: 100%;
 }
 </style>
