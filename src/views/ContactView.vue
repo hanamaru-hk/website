@@ -42,10 +42,10 @@ function handleSubmit() {
 
     <div class="contact-links">
       <n-card class="link-card" :title="t('contact.email')">
-        <p>info@hanamaru.hk</p>
+        <p>software@hanamaru.hk</p>
         <n-button
           tag="a"
-          href="mailto:info@hanamaru.hk"
+          href="mailto:software@hanamaru.hk"
           target="_blank"
           type="primary"
           size="small"
@@ -55,10 +55,10 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.whatsapp')">
-        <p>5980 6801</p>
+        <p>+852 5360 5900</p>
         <n-button
           tag="a"
-          href="https://wa.me/59806801"
+          href="https://wa.me/85253605900"
           target="_blank"
           rel="noopener noreferrer"
           type="primary"
@@ -119,6 +119,6 @@ function handleSubmit() {
 }
 
 .form-card {
-  max-width: 560px;
+  width: 100%;
 }
 </style>
