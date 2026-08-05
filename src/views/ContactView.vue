@@ -38,7 +38,6 @@ function handleSubmit() {
 <template>
   <section>
     <h2 class="title">{{ t('contact.title') }}</h2>
-    <p class="intro">{{ t('contact.intro') }}</p>
 
     <div class="contact-links">
       <n-card class="link-card" :title="t('contact.email')">
@@ -127,12 +126,7 @@ function handleSubmit() {
 .title {
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.intro {
   margin-bottom: 1.5rem;
-  color: rgba(31, 35, 41, 0.7);
 }
 
 .contact-links {
