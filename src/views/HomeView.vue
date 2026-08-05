@@ -38,15 +38,15 @@ const { t } = useI18n()
   padding: 0.7rem 1.75rem;
   font-size: 1rem;
   color: #fff;
-  background: linear-gradient(135deg, #2f9e44, #0b7285);
+  background: linear-gradient(135deg, #4aa3ff, #8f4aff);
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.3);
+  box-shadow: 0 4px 14px rgba(74, 163, 255, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .offer-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(15, 118, 110, 0.4);
+  box-shadow: 0 6px 20px rgba(74, 163, 255, 0.4);
 }
 </style>
