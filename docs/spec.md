@@ -8,8 +8,6 @@ This document describes the preliminary requirements and technical plan for the 
 
 ### Hosting
 
-- Host the website on a VPS running Ubuntu.
-- Serve via Nginx as the reverse proxy / web server.
 - Deploy automatically via GitHub Actions.
 
 ### Frontend
@@ -26,9 +24,4 @@ This document describes the preliminary requirements and technical plan for the 
 
 - **Home**: Displays the site slogan.
 - **Services**: Lists software vendor services.
-- **Contact**: Same as the Hanamaru contact page.
-
-## Open Questions
-
-- Hosting provider and server setup — TBD.
-- Project scaffolding and package manager — TBD.
+- **Contact**: Lists contacts and related information.
