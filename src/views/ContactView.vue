@@ -42,7 +42,7 @@ function handleSubmit() {
 
     <div class="contact-links">
       <n-card class="link-card" :title="t('contact.email')">
-        <p>software@hanamaru.hk</p>
+        <p>{{ t('contact.emailDesc') }}</p>
         <n-button
           tag="a"
           href="mailto:software@hanamaru.hk"
@@ -69,7 +69,7 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.github')">
-        <p>github.com/hanamaru-hk</p>
+        <p>{{ t('contact.githubDesc') }}</p>
         <n-button
           tag="a"
           href="https://github.com/hanamaru-hk"
@@ -83,7 +83,7 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.address')">
-        <p>B7 11/F Por Mee Factory Building,<br />Cheung Sha Wan,<br />Kowloon,<br />Hong Kong</p>
+        <p class="address-text">{{ t('contact.addressDesc') }}</p>
         <p class="booking-note">{{ t('contact.bookingRequired') }}</p>
         <n-button
           tag="a"
@@ -137,9 +137,21 @@ function handleSubmit() {
 
 .contact-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .contact-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
 }
 
 .link-card p {
@@ -150,6 +162,10 @@ function handleSubmit() {
 .booking-note {
   font-size: 0.85rem;
   color: rgba(31, 35, 41, 0.6);
+}
+
+.address-text {
+  white-space: pre-line;
 }
 
 .form-card {
