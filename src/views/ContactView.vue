@@ -42,7 +42,7 @@ function handleSubmit() {
 
     <div class="contact-links">
       <n-card class="link-card" :title="t('contact.email')">
-        <p>software@hanamaru.hk</p>
+        <p>{{ t('contact.emailDesc') }}</p>
         <n-button
           tag="a"
           href="mailto:software@hanamaru.hk"
@@ -69,7 +69,7 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.github')">
-        <p>github.com/hanamaru-hk</p>
+        <p>{{ t('contact.githubDesc') }}</p>
         <n-button
           tag="a"
           href="https://github.com/hanamaru-hk"
@@ -83,7 +83,7 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.address')">
-        <p>B7 11/F Por Mee Factory Building,<br />Cheung Sha Wan,<br />Kowloon,<br />Hong Kong</p>
+        <p class="address-text">{{ t('contact.addressDesc') }}</p>
         <p class="booking-note">{{ t('contact.bookingRequired') }}</p>
         <n-button
           tag="a"
@@ -162,6 +162,10 @@ function handleSubmit() {
 .booking-note {
   font-size: 0.85rem;
   color: rgba(31, 35, 41, 0.6);
+}
+
+.address-text {
+  white-space: pre-line;
 }
 
 .form-card {
