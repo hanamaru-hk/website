@@ -83,7 +83,7 @@ function handleSubmit() {
       </n-card>
 
       <n-card class="link-card" :title="t('contact.address')">
-        <p>B7 11/F Por Mee Factory Building, Cheung Sha Wan, Kowloon, Hong Kong</p>
+        <p>B7 11/F Por Mee Factory Building,<br />Cheung Sha Wan,<br />Kowloon,<br />Hong Kong</p>
         <p class="booking-note">{{ t('contact.bookingRequired') }}</p>
         <n-button
           tag="a"
