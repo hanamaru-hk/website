@@ -20,17 +20,47 @@ const form = ref({
   email: '',
   message: '',
 })
+const submitting = ref(false)
 
 const rules = computed(() => ({
   name: { required: true, message: t('contact.rules.nameRequired'), trigger: ['blur'] },
   email: { required: true, message: t('contact.rules.emailRequired'), trigger: ['blur'] },
 }))
 
+const CONTACT_ENDPOINT = 'https://api.hanamaru.hk/contact'
+const TIMEOUT_MS = 60_000
+
+async function submitForm() {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS)
+  try {
+    const response = await fetch(CONTACT_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form.value),
+      signal: controller.signal,
+    })
+    if (!response.ok) throw new Error(`Request failed with status ${response.status}`)
+    message.success(t('contact.success'))
+    form.value = { name: '', phone: '', email: '', message: '' }
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      message.error(t('contact.errors.timeout'))
+    } else {
+      message.error(t('contact.errors.failed'))
+    }
+  } finally {
+    clearTimeout(timeoutId)
+  }
+}
+
 function handleSubmit() {
   formRef.value?.validate((errors) => {
     if (errors) return
-    message.success(t('contact.success'))
-    form.value = { name: '', phone: '', email: '', message: '' }
+    submitting.value = true
+    submitForm().finally(() => {
+      submitting.value = false
+    })
   })
 }
 </script>
@@ -116,7 +146,9 @@ function handleSubmit() {
             :rows="4"
           />
         </n-form-item>
-        <n-button type="primary" block @click="handleSubmit">{{ t('contact.submit') }}</n-button>
+        <n-button type="primary" block :loading="submitting" @click="handleSubmit">
+          {{ t('contact.submit') }}
+        </n-button>
       </n-form>
     </n-card>
   </section>

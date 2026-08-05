@@ -105,6 +105,10 @@ export default {
     },
     submit: 'Submit',
     success: 'Thank you for your enquiry, we will reply shortly.',
+    errors: {
+      failed: 'Failed to send your message, please try again.',
+      timeout: 'The request timed out, please try again.',
+    },
   },
   footer: {
     rights: '© 2026 Hanamaru Company Limited',

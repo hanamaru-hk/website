@@ -95,6 +95,10 @@ export default {
     },
     submit: '提交',
     success: '多謝你的查詢，我們會盡快回覆。',
+    errors: {
+      failed: '傳送訊息失敗，請再試一次。',
+      timeout: '請求逾時，請再試一次。',
+    },
   },
   footer: {
     rights: '© 2026 花丸有限公司',
