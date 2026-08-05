@@ -1,6 +1,6 @@
-# Hanamaru Software Website
+# Hanamaru Solutions Website
 
-Simple corporate website for Hanamaru Software, built with Vue 3 and Vite.
+Simple corporate website for Hanamaru Solutions, built with Vue 3 and Vite.
 
 See [docs/spec.md](docs/spec.md) for the specification.
 
