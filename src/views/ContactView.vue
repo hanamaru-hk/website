@@ -67,6 +67,35 @@ function handleSubmit() {
           {{ t('contact.chatOnWhatsApp') }}
         </n-button>
       </n-card>
+
+      <n-card class="link-card" :title="t('contact.github')">
+        <p>github.com/hanamaru-hk</p>
+        <n-button
+          tag="a"
+          href="https://github.com/hanamaru-hk"
+          target="_blank"
+          rel="noopener noreferrer"
+          type="primary"
+          size="small"
+        >
+          {{ t('contact.viewOnGitHub') }}
+        </n-button>
+      </n-card>
+
+      <n-card class="link-card" :title="t('contact.address')">
+        <p>B7 11/F Por Mee Factory Building, Cheung Sha Wan, Kowloon, Hong Kong</p>
+        <p class="booking-note">{{ t('contact.bookingRequired') }}</p>
+        <n-button
+          tag="a"
+          href="https://maps.app.goo.gl/TSFMhZpKgmmz31YXA"
+          target="_blank"
+          rel="noopener noreferrer"
+          type="primary"
+          size="small"
+        >
+          {{ t('contact.viewOnMap') }}
+        </n-button>
+      </n-card>
     </div>
 
     <n-card :title="t('contact.formTitle')" class="form-card">
@@ -116,6 +145,11 @@ function handleSubmit() {
 .link-card p {
   margin-bottom: 0.75rem;
   color: rgba(31, 35, 41, 0.8);
+}
+
+.booking-note {
+  font-size: 0.85rem;
+  color: rgba(31, 35, 41, 0.6);
 }
 
 .form-card {
