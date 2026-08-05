@@ -7,6 +7,7 @@ export default {
   home: {
     slogan: 'Build it. Own it.',
     subtitle: 'Hanamaru Software',
+    seeOffers: 'View our services',
   },
   services: {
     title: 'Services',
