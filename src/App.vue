@@ -22,10 +22,39 @@ const naiveLocales = {
 const naiveLocale = computed(
   () => naiveLocales[locale.value] ?? naiveLocales.en,
 )
+
+/** @type {import('naive-ui').GlobalThemeOverrides} */
+const themeOverrides = {
+  common: {
+    primaryColor: '#4aa3ff',
+    primaryColorHover: '#4aa3ff',
+    primaryColorPressed: '#8f4aff',
+  },
+  Menu: {
+    // Text colors
+    itemTextColorHover: '#4aa3ff',
+    itemTextColorActive: '#4aa3ff',
+    itemTextColorActiveHover: '#4aa3ff',
+
+    // Item Background (when selected or hovered)
+    itemColorHover: '#4aa3ff',  // subtle blue hover bg
+    itemColorActive: 'rgba(74, 163, 255, 0.15)', // active item bg
+  },
+  Button: {
+    // Primary Button
+    colorPrimary: '#4aa3ff',
+    borderPrimary: 'rgba(74, 163, 255, 0)',
+    colorHoverPrimary: '#4aa3aa',
+    borderHoverPrimary: 'rgba(74, 163, 255, 0)',
+    textColorHoverPrimary: '#ffffff',
+  },
+}
+
 </script>
 
+
 <template>
-  <n-config-provider :locale="naiveLocale.locale" :date-locale="naiveLocale.dateLocale">
+  <n-config-provider :locale="naiveLocale.locale" :date-locale="naiveLocale.dateLocale" :theme-overrides="themeOverrides">
     <n-message-provider>
       <div class="app">
         <VantaBackground />
@@ -89,4 +118,6 @@ body {
   font-size: 0.85rem;
   color: rgba(31, 35, 41, 0.6);
 }
+
+
 </style>
