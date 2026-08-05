@@ -10,7 +10,6 @@ export default {
   },
   services: {
     title: '服務',
-    intro: '我們提供的軟件供應商服務。',
     items: [
       {
         name: '定制軟件開發',
@@ -66,7 +65,6 @@ export default {
   },
   contact: {
     title: '聯絡我們',
-    intro: '與花丸聯絡。',
     email: '電郵',
     emailDesc: '歡迎隨時電郵至 software{\'@\'}hanamaru.hk 聯絡我們。',
     sendEmail: '發送電郵',

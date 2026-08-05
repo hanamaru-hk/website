@@ -11,7 +11,6 @@ const services = computed(() => tm('services.items'))
 <template>
   <section>
     <h2 class="title">{{ t('services.title') }}</h2>
-    <p class="intro">{{ t('services.intro') }}</p>
 
     <n-grid :x-gap="16" :y-gap="16" responsive="screen" cols="1 s:2">
       <n-gi v-for="(service, index) in services" :key="index">
@@ -28,12 +27,7 @@ const services = computed(() => tm('services.items'))
 .title {
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.intro {
   margin-bottom: 1.5rem;
-  color: rgba(31, 35, 41, 0.7);
 }
 
 .service-card {

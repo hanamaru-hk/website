@@ -10,7 +10,6 @@ export default {
   },
   services: {
     title: 'Services',
-    intro: 'Software vendor services we offer.',
     items: [
       {
         name: 'Custom Software Development',
@@ -76,7 +75,6 @@ export default {
   },
   contact: {
     title: 'Contact',
-    intro: 'Get in touch with Hanamaru.',
     email: 'Email',
     emailDesc: "Feel free to reach out to us at software{'@'}hanamaru.hk.",
     sendEmail: 'Send email',
