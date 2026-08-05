@@ -7,7 +7,6 @@ const { t } = useI18n()
 <template>
   <section class="hero">
     <h1 class="slogan">{{ t('home.slogan') }}</h1>
-    <p class="subtitle">{{ t('home.subtitle') }}</p>
     <router-link class="offer-btn" :to="{ name: 'services' }">
       {{ t('home.seeOffers') }}
     </router-link>
@@ -32,18 +31,6 @@ const { t } = useI18n()
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.subtitle {
-  margin-top: 1.25rem;
-  font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  background: linear-gradient(135deg, #2f9e44, #0b7285);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 2px 12px rgba(15, 118, 110, 0.3);
 }
 
 .offer-btn {

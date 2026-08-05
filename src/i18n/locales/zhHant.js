@@ -6,7 +6,6 @@ export default {
   },
   home: {
     slogan: 'Build it. Own it.',
-    subtitle: 'Hanamaru Software',
     seeOffers: '看看我們的服務',
   },
   services: {
