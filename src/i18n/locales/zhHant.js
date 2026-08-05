@@ -68,7 +68,7 @@ export default {
     title: '聯絡我們',
     intro: '與花丸聯絡。',
     email: '電郵',
-    emailDesc: '歡迎隨時電郵至 software@hanamaru.hk 聯絡我們。',
+    emailDesc: '歡迎隨時電郵至 software{\'@\'}hanamaru.hk 聯絡我們。',
     sendEmail: '發送電郵',
     whatsapp: 'WhatsApp',
     chatOnWhatsApp: 'WhatsApp 對話',
