@@ -10,6 +10,8 @@ export default {
   },
   services: {
     title: 'Services',
+    intro:
+      "Originally <a href=\"https://www.hanamaru.hk\" target=\"_blank\" rel=\"noopener noreferrer\">Hanamaru Company</a>'s internal IT unit dedicated to language education, a fortunate turn of events led us to begin serving external clients. Driven by strong demand and rapid growth, we have since spun off into a fully independent business.",
     items: [
       {
         name: 'Custom Software Development',

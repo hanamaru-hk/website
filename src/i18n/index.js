@@ -25,6 +25,7 @@ const i18n = createI18n({
   locale: readStoredLocale() || DEFAULT_LOCALE,
   fallbackLocale: DEFAULT_LOCALE,
   messages: { en, 'zh-Hant': zhHant },
+  warnHtmlMessage: false,
 })
 
 export default i18n

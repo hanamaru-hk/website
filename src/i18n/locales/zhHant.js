@@ -10,6 +10,8 @@ export default {
   },
   services: {
     title: '服務',
+    intro:
+      '我們原本是<a href="https://www.hanamaru.hk" target="_blank" rel="noopener noreferrer">花丸公司</a>內部的資訊科技部門，專注於語言教育。一次幸運的轉折，令我們開始服務外部客戶。在強勁需求與快速增長下，我們其後發展成為一間完全獨立的企業。',
     items: [
       {
         name: '定制軟件開發',
