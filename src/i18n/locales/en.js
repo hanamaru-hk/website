@@ -11,7 +11,7 @@ export default {
   services: {
     title: 'Services',
     intro:
-      "Originally <a href=\"https://www.hanamaru.hk\" target=\"_blank\" rel=\"noopener noreferrer\">Hanamaru Company</a>'s internal IT unit dedicated to language education, a fortunate turn of events led us to begin serving external clients. Driven by strong demand and rapid growth, we have since spun off into a fully independent business.",
+      'We provide end-to-end software development and technology services — from custom applications and integrations to UI/UX design, cloud, and ongoing support — tailored to your business needs.',
     items: [
       {
         name: 'Custom Software Development',
