@@ -77,7 +77,7 @@ export default {
     viewOnGitHub: '瀏覽 GitHub',
     address: '地址',
     addressDesc:
-      '香港九龍長沙灣青山道 500 號\n百美工廠大廈 11 樓 B7',
+      '香港九龍長沙灣青山道 500 號\n百美工廠大廈',
     bookingRequired: '敬請預約',
     viewOnMap: '在 Google 地圖查看',
     formTitle: '向我們發送訊息',

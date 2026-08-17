@@ -87,7 +87,7 @@ export default {
     viewOnGitHub: 'View on GitHub',
     address: 'Address',
     addressDesc:
-      'B7 11/F Por Mee Factory Building,\nCheung Sha Wan,\nKowloon,\nHong Kong',
+      'Por Mee Factory Building,\nCheung Sha Wan,\nKowloon,\nHong Kong',
     bookingRequired: 'Booking required',
     viewOnMap: 'View on Google Maps',
     formTitle: 'Send us a message',
