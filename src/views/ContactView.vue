@@ -74,7 +74,7 @@ function handleSubmit() {
         <p>{{ t('contact.emailDesc') }}</p>
         <n-button
           tag="a"
-          href="mailto:solutions@hanamaru.hk"
+          href="mailto:info@hanamaru-solutions.hk"
           target="_blank"
           type="primary"
           size="small"
