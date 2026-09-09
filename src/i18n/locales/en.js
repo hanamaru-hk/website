@@ -78,7 +78,7 @@ export default {
   contact: {
     title: 'Contact',
     email: 'Email',
-    emailDesc: "Feel free to reach out to us at solutions{'@'}hanamaru.hk.",
+    emailDesc: "Feel free to reach out to us at info{'@'}hanamaru-solutions.hk.",
     sendEmail: 'Send email',
     whatsapp: 'WhatsApp',
     chatOnWhatsApp: 'Chat on WhatsApp',
