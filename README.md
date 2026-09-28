@@ -23,5 +23,3 @@ npm run build
 - `src/styles.css` — the prototype's responsive editorial design
 
 The selected language is remembered in local storage. `?lang=en` and `?lang=zh-Hant` override the saved choice on initial load.
-
-Before launch, replace content marked `PLACEHOLDER` or `TO CONFIRM` and connect the contact form to a real endpoint.
