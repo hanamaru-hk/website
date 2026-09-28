@@ -1,31 +1,26 @@
-import { createI18n } from 'vue-i18n'
-import en from './locales/en.js'
-import zhHant from './locales/zhHant.js'
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
+import { en, zhHant } from './resources.js'
 
-export const SUPPORTED_LOCALES = {
-  en: { label: 'English', shortLabel: 'EN' },
-  'zh-Hant': { label: '繁體中文', shortLabel: '繁中' },
+const queryLanguage = new URLSearchParams(window.location.search).get('lang')
+let savedLanguage = 'en'
+try {
+  savedLanguage = window.localStorage.getItem('hanamaru-editorial-lang') || 'en'
+} catch {
+  // Storage can be unavailable in strict privacy modes.
 }
+const initialLanguage = queryLanguage
+  ? (queryLanguage.toLowerCase().startsWith('zh') ? 'zh-Hant' : 'en')
+  : savedLanguage || 'en'
 
-export const DEFAULT_LOCALE = 'en'
-export const STORAGE_KEY = 'hanamaru-locale'
-
-function readStoredLocale() {
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored && SUPPORTED_LOCALES[stored]) return stored
-  } catch {
-    /* ignore storage errors */
-  }
-  return null
-}
-
-const i18n = createI18n({
-  legacy: false,
-  locale: readStoredLocale() || DEFAULT_LOCALE,
-  fallbackLocale: DEFAULT_LOCALE,
-  messages: { en, 'zh-Hant': zhHant },
-  warnHtmlMessage: false,
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: en },
+    'zh-Hant': { translation: zhHant },
+  },
+  lng: initialLanguage,
+  fallbackLng: 'en',
+  interpolation: { escapeValue: false },
 })
 
 export default i18n
